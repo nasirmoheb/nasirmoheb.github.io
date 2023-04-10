@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./src/css/build.css" rel="stylesheet" />
+    <!-- <link href="./src/css/build.css" rel="stylesheet" /> -->
+    <link href="./src/css/tailwind.css" rel="stylesheet" />
     <title>Document</title>
     <script>
       window.onload = () => {
@@ -23,27 +24,25 @@
   <body>
     <main class="overflow-hidden">
       <header>
-        <nav
-          class="fixed inset-x-2 top-2 z-50 rounded-lg bg-[#A7D8F0] text-white backdrop-blur-3xl md:inset-x-4 md:top-4"
-        >
-          <div class="relative flex w-full items-center px-4 py-2">
+        <nav class="backdrop-blur-3x z-50 rounded-lg text-blue-300">
+          <div class="mx-4 mt-4 flex items-center md:mx-14">
             <div class="mr-auto flex items-center gap-5">
               <div
                 id="mobile-menu-button"
-                class="group block cursor-pointer md:hidden"
+                class="group block cursor-pointer md:hidden z-10"
               >
                 <div
-                  class="relative top-0 h-1 w-7 rounded-full bg-zinc-100 transition-all group-open:top-2 group-open:rotate-45"
+                  class="relative top-0 h-1 w-7 rounded-full bg-cyan-700 transition-all group-open:top-2 group-open:rotate-45"
                 ></div>
                 <div
-                  class="mt-1 h-1 w-7 translate-x-0 rounded-full bg-zinc-100 opacity-100 group-open:opacity-0"
+                  class="mt-1 h-1 w-7 translate-x-0 rounded-full bg-cyan-700 opacity-100 group-open:opacity-0"
                 ></div>
                 <div
-                  class="relative top-0 mt-1 h-1 w-7 rounded-full bg-zinc-100 transition-all group-open:-top-2 group-open:-rotate-45"
+                  class="relative top-0 mt-1 h-1 w-7 rounded-full bg-cyan-700 transition-all group-open:-top-2 group-open:-rotate-45"
                 ></div>
               </div>
               <div
-                class="px-18 py-18 absolute top-0 left-0 -z-20 hidden w-full rounded-lg bg-[#ebf0fbf5] backdrop-blur-3xl peer-open:block"
+                class="absolute top-0 left-0 m-2 hidden w-[96%] rounded-lg bg-[#c17bf0f3] peer-open:block"
               >
                 <div class="mt-16 mb-4 flex flex-col items-center">
                   <a
@@ -72,7 +71,7 @@
                 href="#"
                 class="absolute left-1/2 flex -translate-x-1/2 items-center text-2xl font-bold text-cyan-900 md:static md:translate-x-0"
                 >@moheb
-                <svg class="h-6 w-6 -mb-1">
+                <svg class="-mb-1 h-6 w-6 fill-blue-600">
                   <use xlink:href="./src/assets/sprite.svg#verified"></use>
                 </svg>
               </a>
@@ -93,22 +92,22 @@
             </div>
             <div class="">
               <img
+                class="w-9 md:w-12"
                 src="./src/assets/logo.png"
-                width="50"
                 alt="Moheb logo"
                 class="rotate-12 transform"
               />
             </div>
           </div>
         </nav>
-        <div class="mx-4 mt-24 md:mx-14 md:mt-40">
+        <div class="mx-4 mt-16 md:mx-14 md:mt-28">
           <div class="mb-2 text-3xl md:mb-3 md:text-6xl">Hi. I am</div>
           <h1
             class="mb-2 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text align-middle text-6xl font-extrabold text-transparent md:text-8xl"
           >
             Nasir A. Moheb
             <svg
-              class="-ml-3 inline-block w-12 fill-blue-600 pb-2 md:w-20 md:pb-4"
+              class="-ml-3 inline-block w-12 fill-blue-500 pb-2 md:w-20 md:pb-4"
               height="100"
               width="100"
             >
@@ -285,10 +284,10 @@
             Here are some of my projects
           </h3>
           <div
-            class=" flex flex-row flex-wrap justify-center gap-y-12 gap-6 md:gap-12"
+            class="flex flex-row flex-wrap justify-center gap-6 gap-y-12 md:gap-12"
           >
             <div
-              class="transform md:-rotate-6 relative z-20 h-96 w-64 overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20 lg:w-72"
+              class="relative z-20 h-96 w-full transform overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20 md:-rotate-6 sm:w-64  md:w-72"
             >
               <div class="relative z-10 mb-2 h-36 w-full">
                 <img
@@ -312,7 +311,7 @@
             </div>
 
             <div
-              class="transform md:rotate-6 relative z-20 h-96 w-64 lg:w-72 overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20"
+              class="relative z-20 h-96 w-full transform overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20 md:rotate-6 sm:w-64 lg:w-72"
             >
               <div class="relative z-10 mb-2 h-36 w-full">
                 <img
@@ -336,7 +335,7 @@
             </div>
 
             <div
-              class="transform md:-rotate-6 relative z-20 h-96 w-64 lg:w-72 overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20"
+              class="relative z-20 h-96 w-full transform overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20 md:-rotate-6 sm:w-64 lg:w-72"
             >
               <div class="relative z-10 mb-2 h-36 w-full">
                 <img
@@ -360,7 +359,7 @@
             </div>
 
             <div
-              class="transform md:rotate-6  relative z-20 h-96 w-64 lg:w-72 overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20"
+              class="relative z-20 h-96 w-full transform overflow-hidden rounded-2xl bg-gradient-to-bl from-pink-300/80 to-violet-500/40 p-4 shadow-violet-500/20 md:rotate-6 sm:w-64 lg:w-72"
             >
               <div class="relative z-10 mb-2 h-36 w-full">
                 <img
@@ -390,7 +389,7 @@
           <h3 class="mb-4 text-center text-4xl font-bold md:text-6xl">
             Get In Touch
           </h3>
-          <p class="text-center text-base">
+          <p class="text-center  text-base ">
             I'm actively looking for new opportunities. But even if you don't
             have a job offer for me, I'd appreciate if you pass by just to say
             hi! Also, don't hesitate in letting me know any feedback or
@@ -399,7 +398,7 @@
 
           <a
             href=""
-            class="shadow-xl shadow-blue-500/50 mx-auto my-6 flex h-12 w-40 items-center justify-center rounded-full bg-sky-700 text-center align-middle text-2xl font-bold text-zinc-100"
+            class="mx-auto my-6 flex h-12 w-40 items-center justify-center rounded-full bg-sky-700 text-center align-middle text-2xl font-bold text-zinc-100 shadow-xl shadow-blue-500/50"
             >Say Hello</a
           >
 
@@ -421,7 +420,7 @@
             </svg>
           </div>
 
-          <p class="mx-auto mt-10 text-center text-sm -mb-4">
+          <p class="mx-auto mt-10 -mb-4 text-center text-xs">
             Designed and Developed by Moheb. <br />
             Built with Tailwindcss.
           </p>
